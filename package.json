@@ -1,9 +1,12 @@
 {
+  "homepage": "https://placu97.github.io/x",
   "name": "x",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -11,6 +14,7 @@
   "dependencies": {
     "@react-three/drei": "^9.32.3",
     "@react-three/fiber": "^8.8.6",
+    "gh-pages": "^4.0.0",
     "gsap": "^3.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

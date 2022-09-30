@@ -4,12 +4,16 @@ import { angleToRadians } from '../utils/angle'
 import { useFrame } from '@react-three/fiber'
 
 export default function SceneContainer() {
-
-  useFrame((state)=> {
-    //console.log(state.clock)
-  })
   
   const orbitControlRef = useRef(null)
+
+  useFrame((state)=> {
+    if (!!orbitControlRef.current) {
+      const {x ,y } = state.mouse
+      orbitControlRef.current.setAzimuthalAngle( - x* (Math.PI/2))
+    }
+  })
+  
   useEffect(()=>  {
     if (!!orbitControlRef.current) {
       console.log(orbitControlRef.current)
@@ -19,7 +23,7 @@ export default function SceneContainer() {
   return (
 	<>
     <PerspectiveCamera makeDefault position={[0,3,9]} />
-    <OrbitControls autoRotate maxPolarAngle={6} ref={orbitControlRef} />
+    <OrbitControls   autoRotate maxPolarAngle={6} ref={orbitControlRef} />
     
 
     {/* Ball */}
