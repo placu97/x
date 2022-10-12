@@ -20,7 +20,7 @@ export default function SceneContainer() {
   useEffect(()=>  {
     if (!!orbitControlRef.current) {
       console.log(orbitControlRef.current)
-      console.log("wwwwwww")
+      // console.log("wwwwwww")
     }
   })
 
