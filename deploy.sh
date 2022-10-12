@@ -22,6 +22,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -u -f git@github.com:placu97/x.git origin:GHP-xtended
+git push -u -f git@github.com:placu97/x.git GHP-xtended
 
 cd -
